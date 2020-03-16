@@ -4,10 +4,23 @@ COEP-DORM Hostel Management System is designed to automate the entire process of
 
 ### Features
 
+ - It allows you to manage all the rooms in hostels effectively.
+ - It allocates the room to the student depending on various factors such as branch, CGPA, caste-reservation, year,etc.
+ - It generates the pdf to list all students to whom the room has been allocated.
+ - It allows to pay online using debit card, credit card or UPI. 
+
 ##### Types Of User:
+ - User
  - Student
  - Admin
-    
+ 
+##### User
+ - Allows student to register.
+ - Allows existing student/admin to login.
+ - Allows user to change or reset password.
+ - Allows user to edit profile.
+ - Provides login/logout functionalities.
+
 ##### Admin
  - The admin can fetch all the details of the applicants, from the main college database containing all the information.
  - The admin needs to specify the total intake per branch and the number of rooms available.
