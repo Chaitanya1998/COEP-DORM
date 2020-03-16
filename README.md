@@ -1,6 +1,6 @@
 # COEP-DORM
 
-COEP-DORM Hostel Management System is designed to automate the entire process of getting admission to the hostel. It collects student information during registration and allocates room to the registered students and also provides paying the fee through debit cards or other payment methods. It also takes into consideration all the factors such as percentage, gender, caste-reservation, etc. This has been created to help the college or school staff and the student to easily register and use the facilities while keeping track of their activities within the premises. This system also generates the pdf which helps to monitor the student details and helps to allocates the room based on the student's preference.
+COEP-DORM Hostel Management System is designed to automate the entire process of getting admission to the hostel. It collects student information during registration and allocates room to the registered students and also provides feature of paying the fee through debit cards or other payment methods. It also takes into consideration all the factors such as branch, gender, caste-reservation, CGPA, etc. This system has been created to help the college and the student to easily register and use the system to allocate the room to the student. This system also generates the pdf which helps to retrieve the student details and helps to allocates the room based on the student's preference.
 
 ### Features
 
@@ -41,10 +41,8 @@ $ pip3 install -r requirement.txt
 
 3. Change directory to COEP-DORM
 ```
-$ cd book_room
-$ python3 manage.py makemigrations accounts
-$ python3 manage.py makemigrations manager
-$ python3 manage.py makemigrations customer
+$ cd COEP-DORM
+$ python3 manage.py makemigrations app1
 $ python3 manage.py migrate
 $ python3 manage.py collectstatic
 ```
