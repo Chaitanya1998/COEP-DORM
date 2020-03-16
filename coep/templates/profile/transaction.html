@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <!-- Tell the browser to be responsive to screen width -->
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="">
+                <meta name="author" content="">
+                <title>Dashboard</title>
+                <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+                <link href="{% static 'css/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+                <link href="{% static 'css/plugins/chartist-js/dist/chartist.min.css' %}" rel="stylesheet">
+                <link href="{% static 'css/plugins/chartist-js/dist/chartist-init.css' %}" rel="stylesheet">
+                <link href="{% static 'css/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css' %}" rel="stylesheet">
+                <link href="{% static 'css/plugins/c3-master/c3.min.css' %}" rel="stylesheet">
+                <link href="{% static 'icons/simple-line-icons.css' %}" rel="stylesheet">
+                <link href="{% static 'css/profile/style.css' %}" rel="stylesheet">
+                <link href="{% static 'icons/font-awesome.css' %}" rel="stylesheet">
+                <link href="{% static 'css/profile/simple-line-icons.css' %}" rel="stylesheet">
+                <link href="{% static 'css/profile/materialdesignicons.min.css' %}" rel="stylesheet">
+                <link href="{% static 'css/profile/linea.css' %}" rel="stylesheet">
+                <link href="{% static 'css/profile/flag-icon.min.css' %}" rel="stylesheet">
+                <link href="{% static 'css/profile/blue.css' %}" id="theme" rel="stylesheet">
+                <link href="{% static 'css/profile/animate.css' %}" id="theme" rel="stylesheet">
+                <link href="{% static 'css/profile/themify-icons.css' %}" id="theme" rel="stylesheet">
+                <link href="{% static 'css/profile/weather-icons.min.css' %}" id="theme" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.7.94/css/materialdesignicons.css">
+                <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+            </head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <div id="main-wrapper">
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+                    <div class="navbar-header">
+                            <a class="navbar-brand" href="{% url 'profile' %}">
+                                <!-- Logo icon --><b>
+                                    <img src="{% static 'logo-light-icon.png' %}" alt="homepage" style="width:50px;height:50px;border-radius: 5px" />
+                                </b>
+                                <span style="color:white;font-size:24px;margin-left:5px;vertical-align: center;">
+                                        COEP DORM
+                                </span> </a>
+                        </div>
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                      
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        
+                    </ul>
+                    <ul class="navbar-nav my-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'images/users/5.jpg' %}" alt="user" class="profile-pic m-r-10" /></a>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                        <ul id="sidebarnav">
+                                {% if u.is_superuser %}
+                                <li> <a class="waves-effect waves-dark" href="/edit/" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Edit</span></a>
+                                </li>
+                                <li> <a class="waves-effect waves-dark" href="/accounts/logout/" aria-expanded="false"><i class="mdi mdi-logout"></i><span class="hide-menu">Log Out</span></a>
+                                </li>
+                                {% else %}
+
+                                <li> <a class="waves-effect waves-dark" href="{% url 'profile' %}" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Profile</span></a>
+                                </li>
+        
+                                <li> <a class="waves-effect waves-dark" href="{% url 'settings' %}" aria-expanded="false"><i class="mdi mdi-bell"></i><span class="hide-menu">Notifications</span></a>
+                                </li>
+        
+                                <li> <a class="waves-effect waves-dark" href="{% url 'transaction' %}" aria-expanded="false"><i class="mdi mdi-credit-card"></i><span class="hide-menu">Transaction Details</span></a>
+                                </li>
+                                <li> <a class="waves-effect waves-dark" href="{% url 'preference' %}" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Preferences</span></a>
+                                </li>
+                                 
+                                <li> <a class="waves-effect waves-dark" href="/accounts/logout/" aria-expanded="false"><i class="mdi mdi-logout"></i><span class="hide-menu">Log Out</span></a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a> </div>
+            <!-- End Bottom points-->
+        </aside>
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 col-8 align-self-center">
+                        <h3 class="text-themecolor m-b-0 m-t-0">Transaction</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item active">Transaction</li>
+                        </ol>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <!-- Column -->
+                    <table class="table col-lg-12 col-xlg-12 col-md-12" id="customers" >
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Transaction Time</th>
+                            <th>Transaction Date</th>
+                            <th>Transaction Amount</th>
+                        </tr>
+                        <tr>
+                          <td>C2K15141</td>
+                          <td>09:15 AM</td>
+                          <td>04/09/2018</td>
+                          <td>20,000/-</td>
+                        </tr>
+                        <tr>
+                          <td>C2K15141</td>
+                          <td>12:15;PM </td>
+                          <td>06/09/2018</td>
+                          <td>10,000/-</td>
+                        </tr>
+                        <tr>
+                          <td>C2K15141</td>
+                          <td>01:15PM</td>
+                          <td> 07/09/2018</td>
+                          <td>10,000/-</td>
+                        </tr>
+                        </table>
+
+ <button id="rzp-button1" class="btn btn-danger" style="font-size:20px;margin:0 45%;margin-top:30px;" >Pay 20,000</button>
+   <script>
+var options = {
+    "key": "rzp_test_9KelsgOqRiRuir",
+    "amount": "2000", // 2000 paise = INR 20
+    "name": "Merchant Name",
+    "description": "Purchase Description",
+    "image": "/your_logo.png",
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+    },
+    "prefill": {
+        "name": "Chaitanya Gawande",
+        "email": "cgawande12@gmail.com"
+    },
+    "notes": {
+        "address": "Pune"
+    },
+    "theme": {
+        "color": "#F37254"
+    }
+};
+var rzp1 = new Razorpay(options);
+
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
+
+                </div>
+                <!-- Row -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+
+    </div>
+
+    <script src="{% static 'css/plugins/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'css/plugins/bootstrap/js/tether.min.js' %}"></script>
+    <script src="{% static 'css/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'js/profile/jquery.slimscroll.js' %}"></script>
+    <!--Wave Effects -->
+    <script src="{% static 'js/profile/waves.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'js/profile/sidebarmenu.js' %}"></script>
+    <!--stickey kit -->
+    <script src="{% static 'css/plugins/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'js/profile/custom.min.js' %}"></script>
+</body>
+
+</html>

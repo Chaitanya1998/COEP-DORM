@@ -1,0 +1,10 @@
+sudo apt-get install python3.6
+pip install django==2.0.7
+pip install mysql-python
+pip install mysqlclient
+pip install --pre xhtml2pdf
+pip install pillow 
+
+
+
+

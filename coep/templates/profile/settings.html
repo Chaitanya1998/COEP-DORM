@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+    <link href="{% static 'css/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/chartist-js/dist/chartist.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/chartist-js/dist/chartist-init.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/c3-master/c3.min.css' %}" rel="stylesheet">
+    <link href="{% static 'icons/simple-line-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/profile/style.css' %}" rel="stylesheet">
+    <link href="{% static 'icons/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/profile/simple-line-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/profile/materialdesignicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/profile/linea.css' %}" rel="stylesheet">
+    <link href="{% static 'css/profile/flag-icon.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/profile/blue.css' %}" id="theme" rel="stylesheet">
+    <link href="{% static 'css/profile/animate.css' %}" id="theme" rel="stylesheet">
+    <link href="{% static 'css/profile/themify-icons.css' %}" id="theme" rel="stylesheet">
+    <link href="{% static 'css/profile/weather-icons.min.css' %}" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.7.94/css/materialdesignicons.css">
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                        <a class="navbar-brand" href="{% url 'profile' %}">
+                            <!-- Logo icon --><b>
+                                    <img src="{% static 'logo-light-icon.png' %}" alt="homepage" style="width:50px;height:50px;border-radius: 5px" /></b>
+                            <span style="color:white;font-size:24px;margin-left:5px;vertical-align: center;">
+                                    COEP DORM
+                            </span> </a>
+                    </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'images/users/5.jpg' %}" alt="user" class="profile-pic m-r-10" /></a>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                        <ul id="sidebarnav">
+                                {% if u.is_superuser %}
+                                <li> <a class="waves-effect waves-dark" href="/edit/" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Edit</span></a>
+                                </li>
+                                <li> <a class="waves-effect waves-dark" href="/accounts/logout/" aria-expanded="false"><i class="mdi mdi-logout"></i><span class="hide-menu">Log Out</span></a>
+                                </li>
+                                {% else %}
+
+                                <li> <a class="waves-effect waves-dark" href="{% url 'profile' %}" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Profile</span></a>
+                                </li>
+        
+                                <li> <a class="waves-effect waves-dark" href="{% url 'settings' %}" aria-expanded="false"><i class="mdi mdi-bell"></i><span class="hide-menu">Notifications</span></a>
+                                </li>
+        
+                                <li> <a class="waves-effect waves-dark" href="{% url 'transaction' %}" aria-expanded="false"><i class="mdi mdi-credit-card"></i><span class="hide-menu">Transaction Details</span></a>
+                                </li>
+                                <li> <a class="waves-effect waves-dark" href="{% url 'preference' %}" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Preferences</span></a>
+                                </li>
+                                <li> <a class="waves-effect waves-dark" href="/accounts/logout/" aria-expanded="false"><i class="mdi mdi-logout"></i><span class="hide-menu">Log Out</span></a>
+                                </li>
+
+                                {% endif %}
+                            </ul>
+
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+            <!-- Bottom points-->
+          <!--  <div class="sidebar-footer">
+                 item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a> </div>
+            <!-- End Bottom points-->
+        </aside>
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row page-titles">
+                    <div class="col-md-5 col-8 align-self-center">
+                        <h3 class="text-themecolor m-b-0 m-t-0">Notification</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item active">Notifications</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                        <!-- Column -->
+                        
+                        <div class="col-lg-12 col-xlg-12 col-md-12">
+                            <div class="card">
+                                <div class="card-block">
+                                    <form class="form-horizontal form-material">
+                                      <table class="table" id="customers" >
+                                            Provisional List 
+                                        <tr>
+                                            <td> <b>Provisional List Of FE Boys</b></td>
+                                            <td><a href="{% url 'fe_pdf_boys'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                            <td> <b>Provisional List Of SE Girls</b> </td>
+                                            <td><a href="{% url 'se_pdf_girls'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b>Provisional List Of TE Boys</b> </td>
+                                            <td><a href="{% url 'te_pdf_boys'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                            <td><b>Provisional List Of BE Girls</b></td>
+                                            <td><a href="{% url 'be_pdf_girls'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                        </tr>
+                                      </table>
+                                                                         
+                                      <table class="table" id="customers" >
+                                            Waiting List 
+                                        <tr>
+                                            <td><b>Waiting List Of FE Boys</b></td>
+                                            <td > <b><a href="{% url 'fe_pdf_w_boys'  %}" ></b> <i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                            <td><b>Waiting List Of SE Girls</b> </td>
+                                            <td><a href="{% url 'se_pdf_w_girls'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b>Waiting List Of TE Boys</b> </td>
+                                            <td><a href="{% url 'te_pdf_w_boys'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                            <td><b>Waiting List Of BE Girls</b></td>
+                                            <td><a href="{% url 'be_pdf_w_girls'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                        </tr>
+                                      </table>
+                                  
+                                      <table class="table" id="customers" >
+                                            Final List 
+                                        <tr>
+                                            <td><b>Final List Of FE Boys</b></td>
+                                            <td ><a href="{% url 'fe_pdf_f_boys'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                            <td><b>Final List Of SE Girls</b> </td>
+                                            <td><a href="{% url 'se_pdf_f_girls'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b>Final List Of TE Boys</b> </td>
+                                            <td><a href="{% url 'te_pdf_f_boys'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                            <td><b>Final List Of BE Girls</b></td>
+                                            <td><a href="{% url 'be_pdf_f_girls'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                        </tr>
+                                      </table>
+
+                                      <table class="table" id="customers" >
+                                            Allotment List 
+                                        <tr>
+                                            <td><b>Allotment List Of FE Boys</b></td>
+                                            <td><a href="{% url 'fe_room_boys'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                            <td><b>Allotment List Of SE Girls</b> </td>
+                                            <td><a href="{% url 'se_room_girls'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b>Allotment List Of TE Boys</b> </td>
+                                            <td><a href="{% url 'te_room_boys'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                            <td><b>Allotment List Of BE Girls</b></td>
+                                            <td><a href="{% url 'be_room_girls'  %}" ><i class="mdi mdi-download" style="font-size:20px;font-weight:bold;"></i></td>
+                                        </tr>
+                                      </table>
+                                    </form>
+                                    
+                                    
+                                        </div>
+                            </div>
+                        </div>
+    
+                        <!-- Column -->
+                    </div>
+    </div>
+    </div>
+    <script src="{% static 'css/plugins/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'css/plugins/bootstrap/js/tether.min.js' %}"></script>
+    <script src="{% static 'css/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'js/profile/jquery.slimscroll.js' %}"></script>
+    <!--Wave Effects -->
+    <script src="{% static 'js/profile/waves.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'js/profile/sidebarmenu.js' %}"></script>
+    <!--stickey kit -->
+    <script src="{% static 'css/plugins/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'js/profile/custom.min.js' %}"></script>
+</body>
+
+</html>

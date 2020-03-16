@@ -1,0 +1,293 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ <html>
+     <head>
+         <title>COEP HOSTEL</title>
+         <style type="text/css">
+         table, th, td {
+    border: 1px solid black;
+}
+             body {
+                 font-weight: 200;
+                 font-size: 14px;
+             }
+             .header {
+                 font-size: 20px;
+                 font-weight: 100;
+                 text-align: center;
+                 color: #007cae;
+             }
+             .title {
+                 font-size: 22px;
+                 font-weight: 100;
+                /* text-align: right;*/
+                padding: 10px 20px 0px 20px;
+             }
+             .title span {
+                 color: #007cae;
+             }
+             .details {
+                 padding: 10px 20px 0px 20px;
+                 text-align: left !important;
+                 /*margin-left: 40%;*/
+             }
+             .hrItem {
+                 border: none;
+                 height: 1px;
+                 /* Set the hr color */
+                 color: #333; /* old IE */
+                 background-color: #fff; /* Modern Browsers */
+             }
+             .department{
+                text-align: center;
+             }
+         </style>
+     </head>
+     <body>
+         <div class='wrapper'>
+             <div class='header'>
+                 <p class='title'>{{ types }} </p>
+             </div>
+         <div>
+         <div class='details'>
+
+
+<h2 class="department">COMPUTER SCIENCE</h2>
+<table style="width:100%">
+  <tr>
+    <th>CID</th>
+    <th>NAME</th>
+    <th>CATEGORY</th>
+    <th>YEAR</th>
+    <th>MARKS</th>
+    <th>STATUS</th>
+  </tr>
+ {% for i in con2.go %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+  {% for i in con2.gom %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+  {% for i in con2.gobc %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+<br><br>
+
+<h2 class="department">IT</h2>
+<table style="width:100%">
+  <tr>
+    <th>CID</th>
+    <th>NAME</th>
+    <th>CATEGORY</th>
+    <th>YEAR</th>
+    <th>MARKS</th>
+    <th>STATUS</th>
+  </tr>
+{% for i in con3.go %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+  {% for i in con3.gom %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+  {% for i in con3.gobc %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+<br><br>
+
+<h2 class="department">MECHANICAL</h2>
+<table style="width:100%" title="MECH">
+  <tr>
+    <th>CID</th>
+    <th>NAME</th>
+    <th>CATEGORY</th>
+    <th>YEAR</th>
+    <th>MARKS</th>
+    <th>STATUS</th>
+  </tr>
+  {% for i in con1.go %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+  {% for i in con1.gom %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+  {% for i in con1.gobc %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+<br><br>
+
+<h2 class="department">PLANNING</h2>
+<table style="width:100%">
+  <tr>
+    <th>CID</th>
+    <th>NAME</th>
+    <th>CATEGORY</th>
+    <th>YEAR</th>
+    <th>MARKS</th>
+    <th>STATUS</th>
+  </tr>
+ {% for i in con4.go %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+  {% for i in con4.gom %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+  {% for i in con4.gobc %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.year }}</td>
+    {% ifequal 'FE' i.year  %}
+        <td> {{ i.cet }} </td>
+    {% else %}
+        <td> {{ i.cgpa }} </td>
+    {% endifequal %}
+
+    <td>{{ i.status }}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+    <hr class='hrItem' />
+     </div>
+     </div>
+     </body>
+ </html>

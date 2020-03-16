@@ -1,0 +1,717 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>COEP DORM</title>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+    <link rel="shortcut icon" type="image/ico" href="{% static 'images/favicon.ico" />
+    <!-- Plugin-CSS -->
+    <link rel="stylesheet" href="{% static 'css/Home/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Home/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Home/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Home/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Home/animate.css' %}">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/Home/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Home/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Home/responsive.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="{% static 'js/Home/modernizr-2.8.3.min.js' %}"></script>
+    <script src="{% static 'js/Home/jquery-1.12.4.min.js' %}"></script>
+
+</head>
+
+<body data-spy="scroll" data-target="#primary-menu">
+
+    <div class="preloader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+    <!--Mainmenu-area-->
+    <div class="mainmenu-area" data-spy="affix" data-offset-top="100">
+           
+        <div class="container">
+            <!--Logo-->
+            <img src="{% static 'logo-light-icon.png' %}" alt="" srcset="" height="80px" width="80px;" style="float:left;border-radius: 5px">
+           
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                
+                <a href="#" class="navbar-brand logo">
+                    <h2>COEP DORM</h2>
+                </a>
+            </div>
+            <!--Logo/-->
+            <nav class="collapse navbar-collapse" id="primary-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#home-page">Home</a></li>
+                    <li><a href="#explore">Explore</a></li>
+                    <!--<li><a href="#feature-page">Features</a></li>-->
+                    <li><a href="#dorm">Dorm</a></li>
+                    <li><a href="#alumni">Alumni</a></li>
+                    <li><a href="#faq-page">FAQ</a></li>
+                    <!--<li><a href="#blog-page">Blog</a></li>-->
+                    <li><a href="#contact-page">Contact</a></li>
+                    
+                                     
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--Mainmenu-area/-->
+
+
+
+    <!--Header-area-->
+    <header class="header-area overlay full-height relative v-center" id="home-page" style="background-image:url(../static/images/hostel.jpg);filter: brightness(125%);">
+        <div class="container">
+            <div class="row v-center">
+                <div class="col-xs-12 header-text">
+                    <h2>“The engineer has been, and is, a maker of history.”</h2>
+                    <h5 class="text-center">-James Kip Finch, American engineer and educator</h5>
+                    <br />
+                    <div class="text-center">
+                        <a href="/accounts/login/" class="button"  >Log In</a>
+
+                        <a href="signup/" class="button" style="margin-left:15px;">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+          <!--<span class="scroll-btn">
+              <a href="#">
+                <span class="mouse">
+                  <span></span>
+                </span>
+              </a>
+            </span>-->
+            <a href="#explore"class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+
+
+            <!--<div class='mouse-container'>
+              <div class='mouse'>
+                <span class='scroll-down'></span>
+              </div>
+            <!--</div>-->
+
+        </div>
+
+    </header>
+
+    <!--Header-area/-->
+
+
+
+    <!--Feature-area-->
+    <section class="gray-bg section-padding" id="explore">
+        <div class="container">
+            <h4 style="Color:black;font-size:30px;padding-top:15px; text-align:center">KNOW THE CLUBS</h4>
+            <br />
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="box">
+                        <div class="box-icon">
+                            <img src="{% static 'images/astronomy.png' %}" alt="">
+                        </div>
+                        <h4>ASTRONOMY</h4>
+                        <p>The CoEP Astronomy club, an ambitious team driven by amateur astronomers, has managed to conjure up a lot of interest amongst students in the science of stargazing.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="box">
+                        <div class="box-icon">
+                            <img src="{% static 'images/history.png' %}" alt="">
+                        </div>
+                        <h4>HISTORY</h4>
+                        <p>The club organizes many site visits and treks to places of historical significance. These tours are guided ones and different field experts or prominent historians are taken along. </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="box">
+                        <div class="box-icon">
+                            <img src="{% static 'images/ANC_logo_webteam.png' %}" alt="">
+                        </div>
+                        <h4>ANC</h4>
+                        <p>The Arts and Crafts club, fondly called as 'ANC' in the college is one of the oldest, prestigious and the biggest club of COEP. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Feature-area/-->
+
+    <section class="angle-bg sky-bg section-padding">
+<h4 style="font-size:30px;color:white;text-align:center;">BEAUTIES OF COEP</h4>
+<br />
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xs-12">
+
+                    <div id="caption_slide" class="carousel slide caption-slider" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active row">
+                                <div class="v-center">
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="caption-title" data-animation="animated fadeInUp">
+                                            <h5 style="font-size:28px;">The Main Hall</h5>
+                                        </div>
+                                        <div class="caption-desc" data-animation="animated fadeInUp">
+                                            <p>The main hall is the present day administrative building of the College. It houses the Director, the Dean Academic Affairs, the Dean Student Affairs, the Gymkhana, the Examination cell and other various important administrative heads of the college.</p>
+                                        </div>
+                                        <div class="caption-button" data-animation="animated fadeInUp">
+                                            <a href="https://en.wikipedia.org/wiki/College_of_Engineering,_Pune#The_Main_Hall" class="button" target="_blank">Read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3">
+                                        <div class="caption-photo one" data-animation="animated fadeInRight">
+                                            <img src="{% static 'images/coephall.png' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3">
+                                        <div class="caption-photo two" data-animation="animated fadeInRight">
+                                            <img src="{% static 'images/coep1.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="v-center">
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="caption-title" data-animation="animated fadeInUp">
+                                            <h5 style="font-size:28px;">Campus View</h5>
+                                        </div>
+                                        <div class="caption-desc" data-animation="animated fadeInUp">
+                                            <p>The college campus is divided in to two parts by Ambedkar-Wellesley Road, where on the right side lies the Heritage building or Main Hall, Civil , Production and Electrical Engineering Departments. On the other side is the Mechanical , Electronics , Computer-science and Instrumentation departments along with the Gymkhana and Boat club. The campus has enough lush green lawns</p>
+                                        </div>
+                                        <div class="caption-button" data-animation="animated fadeInUp">
+                                            <a href="http://www.coep.org.in/" class="button" target="_blank">Read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3">
+                                        <div class="caption-photo one" data-animation="animated fadeInRight">
+                                            <img src="{% static 'images/collegecampus.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3">
+                                        <div class="caption-photo two" data-animation="animated fadeInRight">
+                                            <img src="{% static 'images/coepclg.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="v-center">
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="caption-title" data-animation="animated fadeInUp">
+                                          <h5 style="font-size:28px;">Extravaganant MindSpark</h5>
+                                        </div>
+                                        <div class="caption-desc" data-animation="animated fadeInUp">
+                                            <p>MindSpark is the national level, annual technical festival of College of Engineering, Pune. Since its inception in 2007, MindSpark has grown manifold to become one of the best platforms for young minds to think, innovate and showcase their talents.</p>
+                                        </div>
+                                        <div class="caption-button" data-animation="animated fadeInUp">
+                                            <a href="http://www.coep.org.in/campus_festivals/mindspark" class="button" target="_blank">Read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3">
+                                        <div class="caption-photo one" data-animation="animated fadeInRight">
+                                            <img src="{% static 'images/mind.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3">
+                                        <div class="caption-photo two" data-animation="animated fadeInRight">
+                                            <img src="{% static 'images/ok.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="v-center">
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="caption-title" data-animation="animated fadeInUp">
+                                          <h5 style="font-size:28px;">Regatta-The Boat Festival</h5>
+                                        </div>
+                                        <div class="caption-desc" data-animation="animated fadeInUp">
+                                            <p>The Regatta is an annual boat festival organised by the students of the College of Engineering Pune. The festival, which has a history of 88 years, is a major attraction for the people of Pune and every year draws crowd in a very large amount.</p>
+                                        </div>
+                                        <div class="caption-button" data-animation="animated fadeInUp">
+                                            <a href="http://www.coep.org.in/boatclub/regatta/regatta.html" class="button" target="_blank">Read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3">
+                                        <div class="caption-photo one" data-animation="animated fadeInRight">
+                                            <img src="{% static 'images/regatta_f.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3">
+                                        <div class="caption-photo two" data-animation="animated fadeInRight">
+                                            <img src="{% static 'images/regatta_f2.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators caption-indector">
+                            <li data-target="#caption_slide" data-slide-to="0" class="active">
+                                <strong>Main Hall</strong>Welcoming in the most royal way!.
+                            </li>
+                            <li data-target="#caption_slide" data-slide-to="1">
+                                <strong>Know the Campus </strong>Know your surrounding better!.
+                            </li>
+                            <li data-target="#caption_slide" data-slide-to="2">
+                                <strong>College Fest</strong>The most known fest of Pune city!.
+                            </li>
+                            <li data-target="#caption_slide" data-slide-to="3">
+                                <strong>Boat Club </strong>Unite and deliver the best!.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="gray-bg section-padding" id="feature-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                    <div class="page-title">
+                        <h2 style="font-size:30px;color:black;" >COEP’s Annual National-Level Sports Festival, ZEST</h2>
+                        <p>“The more difficult the victory, the greater the happiness in winning”  - Pele, Brazilian footballer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="box">
+                        <div class="box-icon">
+                            <img src="{% static 'images/coepsport.png' %}" alt="">
+                        </div>
+                        <h3>KHO-KHO</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="box">
+                        <div class="box-icon">
+                            <img src="{% static 'images/sport.jpg' %}" alt="">
+                        </div>
+                        <h3>KABADDI</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="box">
+                        <div class="box-icon">
+                            <img src="{% static 'images/volley2.png' %}" alt="">
+                        </div>
+                        <h3>VOLLEYBALL</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="box">
+                        <div class="box-icon">
+                            <img src="{% static 'images/volley.png' %}" alt="">
+                        </div>
+                        <h3>BASKETBALL</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="box">
+                        <div class="box-icon">
+                            <img src="{% static 'images/bike2.png' %}" alt="">
+                        </div>
+                        <h3>BIKE STUNT</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="box">
+                        <div class="box-icon">
+                            <img src="{% static 'images/football.png' %}" alt="">
+                        </div>
+                        <h3>FOOTBALL</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="price-area overlay section-padding" id="dorm">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                    <div class="page-title">
+                          <h2 style="font-size:30px;" >HOMECOMING</h2>
+                        <p style="font-family:Montserrat">We met here real friends. Everytime since 5 years it is like coming home. Good Feeling is not a hostel - It is a lifestyle!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="price-table">
+                        <h3 class="text-uppercase price-title">AMENITIES</h3>
+                        <hr>
+                        <ol type="1">
+
+                            <li>The students are provided with basic amenities like cot, table, chair, cupboard in their
+rooms.  </li><br />
+                            <li>  The rooms are spacious, airy, and illuminated with the surroundings landscaped with
+greenery. Student’s common rooms have TV sets and carom. </li>
+<br />
+                            <li> The water supply is for 24
+hours. </li>
+
+
+                        </ol>
+                        <hr>
+                      <!--  <a href="#" class="button">Purchase</a>-->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="price-table">
+                        <span class="price-info"><span class="ti-crown"></span></span>
+                        <h3 class="text-uppercase price-title">RULES FOR HOSTEL ADMISSION</h3>
+                        <hr>
+                        <ol  type="1">
+
+                            <li>The admissions are branch wise and on merit basis (CGPA/CET Marks) and as per State Govt.
+reservation rules.</li><br />
+                            <li>Merit list will be prepared on CGPA & having no backlog courses.</li><br />
+                            <li>Ragging within or outside of any educational institution is strictly prohibited.  </li>
+
+                        </ol>
+                        <hr>
+                      <!--  <a href="#" class="button">Purchase</a>-->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <div class="price-table">
+                      <span class=""></span></span>
+                      <h3 class="text-uppercase price-title">RULES FOR HOSTEL ADMISSION</h3>
+                      <hr>
+                      <ol  type="1">
+                        <li> Hostel fees for Regular students: Rs. 27,000/- / year / student. </li><br />
+                        <li> Hostel fees for NRI / FN / PIOs/Gulf: Rs. 90,000/- / year / student. </li><br />
+                        <li>Hostel Mess deposit for boys (Refundable) Rs. 5,000/-/ student.
+              </li>
+
+                      </ol>
+                      <hr>
+                    <!--  <a href="#" class="button">Purchase</a>-->
+                  </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  <!--  <section class="section-padding gray-bg" id="team-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                    <div class="page-title">
+                        <h2>NOTABLE ALUMNI</h2>
+                        <p>Nobody is bothered about an institution more than its alumni! -N. R. Narayana Murthy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="single-team">
+                        <div class="team-photo">
+                            <img src="{% static 'images/profile1.png' %}" alt="">
+                        </div>
+                        <h4>JEMY SEDONCE</h4>
+                        <h6>Co. Founder</h6>
+                        <ul class="social-menu">
+                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                            <li><a href="#"><i class="ti-twitter"></i></a></li>
+                            <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                            <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="single-team">
+                        <div class="team-photo">
+                            <img src="{% static 'images/profile2.png' %}" alt="">
+                        </div>
+                        <h4>DEBORAH BROWN</h4>
+                        <h6>UX Designer</h6>
+                        <ul class="social-menu">
+                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                            <li><a href="#"><i class="ti-twitter"></i></a></li>
+                            <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                            <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="single-team">
+                        <div class="team-photo">
+                            <img src="{% static 'images/profile3.png' %}" alt="">
+                        </div>
+                        <h4>HARRY BANKS</h4>
+                        <h6>Founder</h6>
+                        <ul class="social-menu">
+                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                            <li><a href="#"><i class="ti-twitter"></i></a></li>
+                            <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                            <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="single-team">
+                        <div class="team-photo">
+                            <img src="{% static 'images/profile4.png' %}" alt="">
+                        </div>
+                        <h4>VICTORIA CLARK</h4>
+                        <h6>Creative Director</h6>
+                        <ul class="social-menu">
+                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                            <li><a href="#"><i class="ti-twitter"></i></a></li>
+                            <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                            <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+
+
+
+    <section class="testimonial-area section-padding gray-bg overlay" id="alumni">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                    <div class="page-title">
+                        <h2>Alumni says</h2>
+                      <!--  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates, temporibus at, facere harum fugiat!</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <div class="testimonials">
+                        <div class="testimonial">
+                            <div class="testimonial-photo">
+                                <img src="{% static 'images/alumni1.png' %}" alt="">
+                            </div>
+                            <h3>Aniket Karade</h3>
+                            <p style:"text-align:center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero illum harum hic magni, quae repellendus adipisci possimus saepe nostrum doloribus repudiandae asperiores commodi voluptate.</p>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-photo">
+                                <img src="{% static 'images/alumni2.png' %}" alt="">
+                            </div>
+                            <h3>Vishakha Nambiar</h3>
+                            <p style:"text-align:center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero illum harum hic magni, quae repellendus adipisci possimus saepe nostrum doloribus repudiandae asperiores commodi voluptate.</p>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-photo">
+                                <img src="{% static 'images/alumni3.png' %}" alt="">
+                            </div>
+                            <h3>Chaitanya Gawande</h3>
+                            <p  style:"text-align:center";>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero illum harum hic magni, quae repellendus adipisci possimus saepe nostrum doloribus repudiandae asperiores commodi voluptate.</p>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-photo">
+                                <img src="{% static 'images/alumni4.png' %}" alt="">
+                            </div>
+                            <h3>Priyanka Gandhi</h3>
+                            <p  style:"text-align:center";>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero illum harum hic magni, quae repellendus adipisci possimus saepe nostrum doloribus repudiandae asperiores commodi voluptate.</p>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-photo">
+                                <img src="{% static 'images/alumni1.png' %}" alt="">
+                            </div>
+                            <h3>Disha</h3>
+                            <p  style:"text-align:center";>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero illum harum hic magni, quae repellendus adipisci possimus saepe nostrum doloribus repudiandae asperiores commodi voluptate.</p>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-photo">
+                                <img src="{% static 'images/alumni2.png' %}" alt="">
+                            </div>
+                            <h3>Nakul</h3>
+                            <p  style:"text-align:center";>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero illum harum hic magni, quae repellendus adipisci possimus saepe nostrum doloribus repudiandae asperiores commodi voluptate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="gray-bg section-padding" id="faq-page" >
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+
+                    <div class="page-title">
+                        <h2>Frequently Asked Questions</h2>
+                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates, temporibus at, facere harum fugiat!</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true">How are the facilities at COEP Hostel?</a>
+                            </h4>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodas temporo incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrd exercitation ullamco laboris nisi ut aliquip ex comodo consequat. Duis aute dolor in reprehenderit.</p>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">How is the boys and girls hostel of COEP from inside?</a>
+                            </h4>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodas temporo incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrd exercitation ullamco laboris nisi ut aliquip ex comodo consequat. Duis aute dolor in reprehenderit.</p>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Does COEP hostel has any 2 people room apart from the 4 people room ?</a>
+                            </h4>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodas temporo incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrd exercitation ullamco laboris nisi ut aliquip ex comodo consequat. Duis aute dolor in reprehenderit.</p>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">How many students get admission to hostels of COEP ?</a>
+                            </h4>
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodas temporo incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrd exercitation ullamco laboris nisi ut aliquip ex comodo consequat. Duis aute dolor in reprehenderit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class=" relative sky-bg" id="contact-page">
+      <div class="">
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                  <div class=""><h2 style="margin:20px 0; padding-top:20px;">CONTACT US</h2></div>
+              </div>
+          </div>
+
+        <div id="map" style="width:100%;height:525px;background:yellow"></div>
+        <script>
+        function myMap() {
+        var mapOptions = {
+        center:new google.maps.LatLng(18.529339,73.8553795),
+        zoom:15,
+        mapTypeId: 'roadmap',
+        mapTypeControl: false,
+        stylers: [{color: '#242f3e'}]
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMilX67o-5hDxDub5r80Aj0qOxrvJuK_4&callback=myMap"></script>
+      </div>
+                <div class="container" style="margin-top:25px;">
+
+                    <address class="side-icon-boxes ">
+                      <div class="side-icon-box col-sm-12 col-md-4" >
+                           <div class="side-icon">
+                               <img src="{% static 'images/arrow.png' %}" alt="">
+                           </div>
+                           <p><strong>Address: </strong>Wellesley Rd, Shivajinagar, Pune, Maharashtra 411005</p>
+                                               </div>
+                         <div class="side-icon-box col-sm-12 col-md-4">
+                           <div class="side-icon">
+                               <img src="{% static 'images/phone-arrow.png' %}" alt="">
+                           </div>
+                             <p><strong>Telephone: </strong>
+                                 <a href="callto:8801812726495">+8801812726495</a> <br />
+                                 <a href="callto:8801687420471">+8801687420471</a>
+                             </p>
+                         </div>
+                         <div class="side-icon-box col-sm-12 col-md-4">
+                           <div class="side-icon">
+                                    <img src="{% static 'images/mail-arrow.png' %}" alt="">
+                                </div>
+                             <p><strong>E-mail: </strong>
+                                 <a href="mailto:cgawande12@gmail.com"><span class="__cf_email__" >cgawande12@gmail.com</span></a> <br />
+                                 <a href="/cdn-cgi/l/email-protection#5d2432282f38303c34311d38253c302d3138733e3230">
+                                   <span class="__cf_email__">aniketkarande592@gmail.com</span></a>
+                             </p>
+                         </div>
+                     </address>
+                </div>
+      <div class="footer-bottom" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <p>&copy;Copyright 2018 COEP DORM </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!--Vendor-JS-->
+  <script src="{% static 'js/Home/bootstrap.min.js' %}"></script>
+    <!--Plugin-JS-->
+    <script src="{% static 'js/Home/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/Home/contact-form.js' %}"></script>
+    <script src="{% static 'js/Home/jquery.parallax-1.1.3.js' %}"></script>
+    <script src="{% static 'js/Home/scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/Home/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/Home/wow.min.js' %}"></script>
+    <!--Main-active-JS-->
+    <script src="{% static 'js/Home/main.js' %}"></script>
+</body>
+
+</html>

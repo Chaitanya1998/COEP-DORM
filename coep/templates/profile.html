@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>Preference</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://intercoolerreleases-leaddynocom.netdna-ssl.com/intercooler-1.1.1.min.js"></script>
+  </head>
+  <body>
+
+    {{err}}
+    <form class="" method="post" action="{% url 'save' %}">
+      {% csrf_token %}
+      <p><label for="id_n1">N1:</label> <input type="text" name="n1" maxlength="40" required id="id_n1" list="cars"
+        ic-post-to="{% url 'search-ajax-submit' %}"
+        	       ic-trigger-on="keyup changed"
+        	       ic-trigger-delay="300ms"
+                 ic-target="#search-result-container"
+                 
+         /></p>
+ <p><label for="id_n2">N2:</label> <input type="text" name="n2" maxlength="40" required id="id_n2" list="car2"
+   ic-post-to="{% url 'search-ajax-submit' %}"
+            ic-trigger-on="keyup changed"
+            ic-trigger-delay="300ms"
+            ic-target="#search-result-container"
+    /></p>
+ <p><label for="id_n3">N3:</label> <input type="text" name="n3" maxlength="40" required id="id_n3" list="car3"
+   ic-post-to="{% url 'search-ajax-submit' %}"
+            ic-trigger-on="keyup changed"
+            ic-trigger-delay="300ms"
+            ic-target="#search-result-container"
+   /></p>
+ <input type="submit" name="submit" value="submit">
+        </form>
+        <span id="search-result-container" style="display:none"></span>
+
+        {% if query1 %}
+        <datalist id="cars">
+          {% for x in list1 %}
+            <option> {{x.username}} | {{x.name}}</option>
+          {% endfor %}
+        </datalist>
+        {% endif %}
+
+        {% if query2 %}
+        <datalist id="car2">
+          {% for x in list2 %}
+            <option>{{x.username}} | {{x.name}}</option>
+          {% endfor %}
+        </datalist>
+        {% endif %}
+
+        {% if query3 %}
+        <datalist id="car3">
+          {% for x in list3 %}
+            <option> {{x.username}} | {{x.name}}</option>
+          {% endfor %}
+        </datalist>
+        {% endif %}
+        <div class="row page-titles">
+            <div class="col-md-5 col-8 align-self-center">
+                <h3 class="text-themecolor m-b-0 m-t-0">Settings</h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                    <li class="breadcrumb-item active">Settings</li>
+                </ol>
+            </div>
+        </div>
+  </body>
+</html>
